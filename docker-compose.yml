@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb+srv://Proyecto_DS_II:5tGOjQkDhH67sf9t@cluster0.uux2ndk.mongodb.net/universidad?retryWrites=true&w=majority&appName=Cluster0
+      - JWT_SECRET=universidad_sistema_asistencia_2025_secreto
+      - JWT_EXPIRATION=24h
+    restart: always
